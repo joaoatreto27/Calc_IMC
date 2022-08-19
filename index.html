@@ -7,9 +7,41 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <title>Calculadore de IMC</title>
+    <title>Calculadora de IMC</title>
+    
 </head>
 <body class="main">
-    
+    <div class="card-imc">
+
+        <h1 class="title">Calcule seu IMC</h1>
+        <div class="label-span">
+            <label class="label">Peso</label>
+            <span id="spanWeight">65</span>
+        </div>
+        <input
+        oninput="Weight()"
+        id="weight"
+        class="peso-altura"
+        type="range"
+        value="65"
+        max="350"
+        >
+        <div class="label-span">
+            <label class="label">Altura</label>
+            <span id="spanHeight">1.64</span>
+        </div>
+        <input
+        oninput="Height()"
+        id="height"
+        class="peso-altura"
+        type="range"
+        value='65'
+        max="2.52"
+        step="0.01"
+        >
+        <button onclick="calculate()">Calcular</button>
+        <p>IMC: <span id="result" class="result"></span></p>
+    </div>
 </body>
+<script src="index.js"></script>
 </html>
