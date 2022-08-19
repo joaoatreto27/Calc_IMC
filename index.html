@@ -16,9 +16,10 @@
         <h1 class="title">Calcule seu IMC</h1>
         <div class="label-span">
             <label class="label">Peso</label>
-            <span>65</span>
+            <span id="spanWeight">65</span>
         </div>
         <input
+        oninput="Weight()"
         id="weight"
         class="peso-altura"
         type="range"
@@ -27,9 +28,10 @@
         >
         <div class="label-span">
             <label class="label">Altura</label>
-            <span>1.64</span>
+            <span id="spanHeight">1.64</span>
         </div>
         <input
+        oninput="Height()"
         id="height"
         class="peso-altura"
         type="range"
@@ -37,17 +39,9 @@
         max="2.52"
         step="0.01"
         >
-        <button>Calcular</button>
-        <p>IMC:</p>
+        <button onclick="calculate()">Calcular</button>
+        <p>IMC: <span id="result" class="result"></span></p>
     </div>
 </body>
-<script>
-    var $range = document.querySelector('input'),
-    $value = document.querySelector('span');
-
-    $range.addEventListener('input', function() {
-    $value.textContent = this.value;
-    });
-
-</script>
+<script src="index.js"></script>
 </html>
